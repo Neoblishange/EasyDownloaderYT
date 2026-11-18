@@ -1,0 +1,16 @@
+# .NET
+[Bb]in/
+[Oo]bj/
+.vs/
+
+# IDE Local Files
+*.user
+*.suo
+*.iml
+.idea/
+
+# Logs
+*.log
+
+# Downloaded third-party tools
+Resources/Tools/*.exe

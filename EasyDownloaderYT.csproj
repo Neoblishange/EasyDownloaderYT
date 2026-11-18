@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PublishAot>false</PublishAot>
+    <ApplicationIcon>Resources\Icons\EasyDownloaderYT.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <Content Include="THIRD-PARTY-NOTICES.md">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+          <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </Content>
+      <Content Include="LICENSE.md">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+          <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </Content>
+      <Content Include="Licenses\**\*">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+          <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+      <Compile Remove="Tests\**\*.cs" />
+  </ItemGroup>
+
+  <Target Name="DownloadExternalTools" BeforeTargets="AssignTargetPaths">
+      <Exec Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(MSBuildProjectDirectory)\scripts\Download-Tools.ps1&quot;" />
+      <ItemGroup>
+          <Content Include="Resources\Tools\**\*">
+              <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+              <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+              <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+          </Content>
+      </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+      <Resource Include="Resources\Fonts\*.ttf" />
+      <Resource Include="Resources\Icons\EasyDownloaderYT.ico" />
+  </ItemGroup>
+</Project>

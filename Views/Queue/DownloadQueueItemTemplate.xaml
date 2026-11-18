@@ -1,0 +1,90 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BooleanToVisibilityConverter x:Key="QueueItemVisibilityConverter"/>
+
+    <DataTemplate x:Key="DownloadQueueItemTemplate">
+        <Border Background="White"
+                BorderBrush="#D1D5DB"
+                BorderThickness="1"
+                CornerRadius="10"
+                Padding="10,10,10,15"
+                Margin="4,0,4,6">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding DisplayTitle}"
+                               FontSize="{DynamicResource FontSize.Small}"
+                               Foreground="#374151"
+                               TextTrimming="CharacterEllipsis"
+                               ToolTip="{Binding Url}"
+                               VerticalAlignment="Center"/>
+                    <Button Grid.Column="1"
+                            ToolTip="{DynamicResource Queue.Cancel}"
+                            Command="{Binding DataContext.CancelCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                            CommandParameter="{Binding}"
+                            Visibility="{Binding CanCancel, Converter={StaticResource QueueItemVisibilityConverter}}"
+                            Width="24"
+                            Height="24"
+                            Margin="6,0,0,0"
+                            Padding="0"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Style="{DynamicResource QueueCancelButton}">
+                        <Path Data="M 1,1 L 7,7 M 7,1 L 1,7"
+                              Width="8"
+                              Height="8"
+                              Stretch="Fill"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
+                              StrokeThickness="1.8"
+                              StrokeStartLineCap="Round"
+                              StrokeEndLineCap="Round"/>
+                    </Button>
+                    <Button Grid.Column="1"
+                            ToolTip="{DynamicResource Queue.Retry}"
+                            Command="{Binding DataContext.RetryCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                            CommandParameter="{Binding}"
+                            Visibility="{Binding CanRetry, Converter={StaticResource QueueItemVisibilityConverter}}"
+                            Width="24"
+                            Height="24"
+                            Margin="6,0,0,0"
+                            Padding="0"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Style="{DynamicResource QueueRetryButton}">
+                        <TextBlock Text="↻"
+                                   Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
+                                   VerticalAlignment="Center"/>
+                    </Button>
+                </Grid>
+                <TextBlock Text="{Binding FormatText}"
+                           FontSize="{DynamicResource FontSize.ExtraSmall}"
+                           Foreground="#6B7280"
+                           Margin="0,2,0,0"/>
+                <Grid Margin="0,6,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding StatusText}"
+                               FontSize="{DynamicResource FontSize.ExtraSmall}"
+                               Foreground="#4B5563"
+                               VerticalAlignment="Center"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding Progress, StringFormat={}{0}%}"
+                               FontSize="{DynamicResource FontSize.ExtraSmall}"
+                               Foreground="#4B5563"
+                               Margin="12,0,0,0"/>
+                </Grid>
+                <ProgressBar Height="4"
+                             Minimum="0"
+                             Maximum="100"
+                             Value="{Binding Progress}"
+                             Margin="0,6,0,0"
+                             Style="{DynamicResource ThinProgressBar}"/>
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+</ResourceDictionary>

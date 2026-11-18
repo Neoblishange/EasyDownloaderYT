@@ -1,0 +1,80 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+
+    <FontFamily x:Key="App.Font">Segoe UI Variable Text, Segoe UI</FontFamily>
+
+    <!-- Interface -->
+    <sys:String x:Key="Hero.Title">Paste a link,&#x0A;we'll handle the rest.</sys:String>
+    <sys:String x:Key="Hero.Subtitle">Video in MP4 or audio in MP3 or WAV, at the best quality available in your Videos folder.</sys:String>
+    <sys:String x:Key="Label.Link">Link</sys:String>
+    <sys:String x:Key="Label.Format">Format</sys:String>
+    <sys:String x:Key="Button.Paste">Paste</sys:String>
+    <sys:String x:Key="Button.Download">Download</sys:String>
+    <sys:String x:Key="Button.OpenFolder">Open my downloads</sys:String>
+    <sys:String x:Key="Button.Update">Update yt-dlp</sys:String>
+    <sys:String x:Key="Format.Video">Video (MP4)</sys:String>
+    <sys:String x:Key="Format.AudioMp3">Audio (MP3)</sys:String>
+    <sys:String x:Key="Format.AudioWav">Audio (WAV)</sys:String>
+
+    <!-- Statuses -->
+    <sys:String x:Key="Status.Idle">Waiting for a download</sys:String>
+    <sys:String x:Key="Status.Downloading">Downloading...</sys:String>
+    <sys:String x:Key="Status.PostProcessing">Finalizing download...</sys:String>
+    <sys:String x:Key="Status.Progress">Downloading: {0}%</sys:String>
+    <sys:String x:Key="Status.Done">Download complete!</sys:String>
+    <sys:String x:Key="Status.Error">An error occurred.</sys:String>
+    <sys:String x:Key="Status.Updating">Updating...</sys:String>
+    <sys:String x:Key="Status.UpdateFailed">The update failed.</sys:String>
+    <sys:String x:Key="Queue.Title">Download queue</sys:String>
+    <sys:String x:Key="Queue.Empty">No downloads in the queue.</sys:String>
+    <sys:String x:Key="Queue.Waiting">Waiting</sys:String>
+    <sys:String x:Key="Queue.Downloading">Downloading...</sys:String>
+    <sys:String x:Key="Queue.PostProcessing">Finalizing...</sys:String>
+    <sys:String x:Key="Queue.Done">Completed</sys:String>
+    <sys:String x:Key="Queue.Failed">Failed</sys:String>
+    <sys:String x:Key="Queue.TitleUnavailable">Title unavailable</sys:String>
+    <sys:String x:Key="Queue.Validating">Checking link...</sys:String>
+    <sys:String x:Key="Queue.Cancel">Cancel download</sys:String>
+    <sys:String x:Key="Queue.Retry">Retry download</sys:String>
+    <sys:String x:Key="Queue.Cancelled">Cancelled</sys:String>
+    <sys:String x:Key="Queue.Clear">Clear</sys:String>
+
+    <!-- Dialog Box -->
+    <sys:String x:Key="Msg.LinkMissing.Title">Missing link</sys:String>
+    <sys:String x:Key="Msg.LinkMissing.Text">Please paste a link before downloading.</sys:String>
+    <sys:String x:Key="Msg.ClipboardEmpty.Title">Clipboard empty</sys:String>
+    <sys:String x:Key="Msg.ClipboardEmpty.Text">No link has been copied. Copy the video link first.</sys:String>
+    <sys:String x:Key="Msg.ClipboardError.Title">Error</sys:String>
+    <sys:String x:Key="Msg.ClipboardError.Text">Unable to read the clipboard. Please try again.</sys:String>
+    <sys:String x:Key="Msg.DownloadDone.Title">Done</sys:String>
+    <sys:String x:Key="Msg.DownloadDone.Text">Your download is complete!</sys:String>
+    <sys:String x:Key="Msg.DownloadError.Title">Download error</sys:String>
+    <sys:String x:Key="Msg.Update.Title">Update</sys:String>
+    <sys:String x:Key="Msg.UpdateError.Title">Update error</sys:String>
+
+    <!-- Update  -->
+    <sys:String x:Key="Update.UpToDate">yt-dlp is already up to date.</sys:String>
+    <sys:String x:Key="Update.Updated">yt-dlp has been updated. You can retry your downloads.</sys:String>
+    <sys:String x:Key="Update.Failed">The update failed. Check your Internet connection.</sys:String>
+
+    <!-- Errors -->
+    <sys:String x:Key="Error.Unknown">The download failed. Check the link or try again.</sys:String>
+    <sys:String x:Key="Error.Failed">The download could not be completed. Try again, or update yt-dlp if the problem persists.</sys:String>
+    <sys:String x:Key="Error.ToolMissing">The yt-dlp.exe component is missing. Please reinstall the application.</sys:String>
+    <sys:String x:Key="Error.InvalidUrl">This link is not valid or not supported. Make sure it is complete.</sys:String>
+    <sys:String x:Key="Error.InvalidVideoId">This video ID appears to be incorrect. Check the copied link and try again.</sys:String>
+    <sys:String x:Key="Error.AgeRestricted">This video is age-restricted and requires signing in to YouTube, which the app cannot do.</sys:String>
+    <sys:String x:Key="Error.LoginRequired">This video requires signing in to YouTube, which the app cannot do. Try a video that is available without an account.</sys:String>
+    <sys:String x:Key="Error.NotABot">YouTube is asking for an anti-bot check. Try again later.</sys:String>
+    <sys:String x:Key="Error.Private">This video is private.</sys:String>
+    <sys:String x:Key="Error.MembersOnly">This video is reserved for channel members.</sys:String>
+    <sys:String x:Key="Error.GeoBlocked">This video is not available in your country.</sys:String>
+    <sys:String x:Key="Error.NotStarted">This video is a premiere or a live stream that has not started yet.</sys:String>
+    <sys:String x:Key="Error.Live">This live stream is ongoing. Try again once it has ended.</sys:String>
+    <sys:String x:Key="Error.Unavailable">This video is unavailable (deleted, blocked or inaccessible).</sys:String>
+    <sys:String x:Key="Error.RateLimit">Too many requests in a short time. Wait a few minutes and try again.</sys:String>
+    <sys:String x:Key="Error.Network">Unable to connect. Check your Internet connection.</sys:String>
+    <sys:String x:Key="Error.FormatUnavailable">The selected format is not available for this video. Try the other format.</sys:String>
+    <sys:String x:Key="Error.Ffmpeg">This file could not be converted. Try again; if the problem persists, reinstall the app.</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,80 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+
+    <FontFamily x:Key="App.Font">Segoe UI Variable Text, Segoe UI</FontFamily>
+
+    <!-- Interface -->
+    <sys:String x:Key="Hero.Title">Collez un lien,&#x0A;on s'occupe du reste.</sys:String>
+    <sys:String x:Key="Hero.Subtitle">Vidéo en MP4 ou audio en MP3 ou WAV, à la meilleure qualité disponible dans votre dossier Vidéos.</sys:String>
+    <sys:String x:Key="Label.Link">Lien</sys:String>
+    <sys:String x:Key="Label.Format">Format</sys:String>
+    <sys:String x:Key="Button.Paste">Coller</sys:String>
+    <sys:String x:Key="Button.Download">Télécharger</sys:String>
+    <sys:String x:Key="Button.OpenFolder">Ouvrir mes téléchargements</sys:String>
+    <sys:String x:Key="Button.Update">Mettre à jour yt-dlp</sys:String>
+    <sys:String x:Key="Format.Video">Vidéo (MP4)</sys:String>
+    <sys:String x:Key="Format.AudioMp3">Audio (MP3)</sys:String>
+    <sys:String x:Key="Format.AudioWav">Audio (WAV)</sys:String>
+
+    <!-- Statuses -->
+    <sys:String x:Key="Status.Idle">En attente d'un téléchargement</sys:String>
+    <sys:String x:Key="Status.Downloading">Téléchargement en cours...</sys:String>
+    <sys:String x:Key="Status.PostProcessing">Finalisation du téléchargement...</sys:String>
+    <sys:String x:Key="Status.Progress">Téléchargement : {0}%</sys:String>
+    <sys:String x:Key="Status.Done">Téléchargement terminé !</sys:String>
+    <sys:String x:Key="Status.Error">Une erreur est survenue.</sys:String>
+    <sys:String x:Key="Status.Updating">Mise à jour en cours...</sys:String>
+    <sys:String x:Key="Status.UpdateFailed">La mise à jour a échoué.</sys:String>
+    <sys:String x:Key="Queue.Title">File d’attente</sys:String>
+    <sys:String x:Key="Queue.Empty">Aucun téléchargement dans la file.</sys:String>
+    <sys:String x:Key="Queue.Waiting">En attente</sys:String>
+    <sys:String x:Key="Queue.Downloading">Téléchargement en cours...</sys:String>
+    <sys:String x:Key="Queue.PostProcessing">Finalisation...</sys:String>
+    <sys:String x:Key="Queue.Done">Terminé</sys:String>
+    <sys:String x:Key="Queue.Failed">Échec</sys:String>
+    <sys:String x:Key="Queue.TitleUnavailable">Titre indisponible</sys:String>
+    <sys:String x:Key="Queue.Validating">Vérification du lien...</sys:String>
+    <sys:String x:Key="Queue.Cancel">Annuler le téléchargement</sys:String>
+    <sys:String x:Key="Queue.Retry">Réessayer le téléchargement</sys:String>
+    <sys:String x:Key="Queue.Cancelled">Annulé</sys:String>
+    <sys:String x:Key="Queue.Clear">Vider</sys:String>
+
+    <!-- Dialog Box -->
+    <sys:String x:Key="Msg.LinkMissing.Title">Lien manquant</sys:String>
+    <sys:String x:Key="Msg.LinkMissing.Text">Veuillez coller un lien avant de télécharger.</sys:String>
+    <sys:String x:Key="Msg.ClipboardEmpty.Title">Presse-papiers vide</sys:String>
+    <sys:String x:Key="Msg.ClipboardEmpty.Text">Aucun lien n'a été copié. Copiez d'abord le lien de la vidéo.</sys:String>
+    <sys:String x:Key="Msg.ClipboardError.Title">Erreur</sys:String>
+    <sys:String x:Key="Msg.ClipboardError.Text">Impossible de lire le presse-papiers. Réessayez.</sys:String>
+    <sys:String x:Key="Msg.DownloadDone.Title">Terminé</sys:String>
+    <sys:String x:Key="Msg.DownloadDone.Text">Votre téléchargement est terminé !</sys:String>
+    <sys:String x:Key="Msg.DownloadError.Title">Erreur de téléchargement</sys:String>
+    <sys:String x:Key="Msg.Update.Title">Mise à jour</sys:String>
+    <sys:String x:Key="Msg.UpdateError.Title">Erreur de mise à jour</sys:String>
+
+    <!-- Update  -->
+    <sys:String x:Key="Update.UpToDate">yt-dlp est déjà à jour.</sys:String>
+    <sys:String x:Key="Update.Updated">yt-dlp a été mis à jour. Vous pouvez relancer vos téléchargements.</sys:String>
+    <sys:String x:Key="Update.Failed">La mise à jour a échoué. Vérifiez votre connexion Internet.</sys:String>
+
+    <!-- Errors -->
+    <sys:String x:Key="Error.Unknown">Le téléchargement a échoué. Vérifiez le lien ou réessayez.</sys:String>
+    <sys:String x:Key="Error.Failed">Le téléchargement n'a pas abouti. Réessayez ou mettez yt-dlp à jour si le problème persiste.</sys:String>
+    <sys:String x:Key="Error.ToolMissing">Le composant yt-dlp.exe est introuvable. Réinstallez l'application.</sys:String>
+    <sys:String x:Key="Error.InvalidUrl">Ce lien n'est pas valide ou n'est pas pris en charge. Vérifiez qu'il est complet.</sys:String>
+    <sys:String x:Key="Error.InvalidVideoId">L'identifiant de cette vidéo semble incorrect. Vérifiez le lien copié et réessayez.</sys:String>
+    <sys:String x:Key="Error.AgeRestricted">Cette vidéo est réservée à un public majeur et nécessite une connexion à YouTube, que l'application ne peut pas effectuer.</sys:String>
+    <sys:String x:Key="Error.LoginRequired">Cette vidéo nécessite une connexion à YouTube, que l'application ne peut pas effectuer. Essayez une vidéo accessible sans compte.</sys:String>
+    <sys:String x:Key="Error.NotABot">YouTube demande une vérification anti-robot. Réessayez plus tard.</sys:String>
+    <sys:String x:Key="Error.Private">Cette vidéo est privée.</sys:String>
+    <sys:String x:Key="Error.MembersOnly">Cette vidéo est réservée aux membres de la chaîne.</sys:String>
+    <sys:String x:Key="Error.GeoBlocked">Cette vidéo n'est pas disponible dans votre pays.</sys:String>
+    <sys:String x:Key="Error.NotStarted">Cette vidéo est une première ou un direct qui n'a pas encore commencé.</sys:String>
+    <sys:String x:Key="Error.Live">Ce direct est en cours. Réessayez quand il sera terminé.</sys:String>
+    <sys:String x:Key="Error.Unavailable">Cette vidéo est indisponible (supprimée, bloquée ou non accessible).</sys:String>
+    <sys:String x:Key="Error.RateLimit">Trop de demandes en peu de temps. Patientez quelques minutes puis réessayez.</sys:String>
+    <sys:String x:Key="Error.Network">Impossible de se connecter. Vérifiez votre connexion Internet.</sys:String>
+    <sys:String x:Key="Error.FormatUnavailable">Le format choisi n'est pas disponible pour cette vidéo. Essayez l'autre format.</sys:String>
+    <sys:String x:Key="Error.Ffmpeg">Impossible de convertir ce fichier. Réessayez ; si le problème persiste, réinstallez l'application.</sys:String>
+</ResourceDictionary>

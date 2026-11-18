@@ -1,0 +1,80 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+
+    <FontFamily x:Key="App.Font">pack://application:,,,/Resources/Fonts/#Kantumruy Pro, Leelawadee UI</FontFamily>
+
+    <!-- Interface -->
+    <sys:String x:Key="Hero.Title">បិទភ្ជាប់តំណភ្ជាប់&#x0A;ហើយទុកឱ្យយើងធ្វើបន្តទៀត។</sys:String>
+    <sys:String x:Key="Hero.Subtitle">វីដេអូជា MP4 ឬសំឡេងជា MP3 ឬ WAV ក្នុងគុណភាពល្អបំផុតដែលមាននៅក្នុងថតវីដេអូរបស់អ្នក។</sys:String>
+    <sys:String x:Key="Label.Link">តំណភ្ជាប់</sys:String>
+    <sys:String x:Key="Label.Format">ទម្រង់</sys:String>
+    <sys:String x:Key="Button.Paste">បិទភ្ជាប់</sys:String>
+    <sys:String x:Key="Button.Download">ទាញយក</sys:String>
+    <sys:String x:Key="Button.OpenFolder">បើកថតទាញយករបស់ខ្ញុំ</sys:String>
+    <sys:String x:Key="Button.Update">ធ្វើបច្ចុប្បន្នភាព yt-dlp</sys:String>
+    <sys:String x:Key="Format.Video">វីដេអូ (MP4)</sys:String>
+    <sys:String x:Key="Format.AudioMp3">សំឡេង (MP3)</sys:String>
+    <sys:String x:Key="Format.AudioWav">សំឡេង (WAV)</sys:String>
+
+    <!-- Statuses -->
+    <sys:String x:Key="Status.Idle">កំពុងរង់ចាំការទាញយក</sys:String>
+    <sys:String x:Key="Status.Downloading">កំពុងទាញយក...</sys:String>
+    <sys:String x:Key="Status.PostProcessing">កំពុងបញ្ចប់ការទាញយក...</sys:String>
+    <sys:String x:Key="Status.Progress">កំពុងទាញយក៖ {0}%</sys:String>
+    <sys:String x:Key="Status.Done">ការទាញយកបានបញ្ចប់!</sys:String>
+    <sys:String x:Key="Status.Error">មានបញ្ហាកើតឡើង។</sys:String>
+    <sys:String x:Key="Status.Updating">កំពុងធ្វើបច្ចុប្បន្នភាព...</sys:String>
+    <sys:String x:Key="Status.UpdateFailed">ការធ្វើបច្ចុប្បន្នភាពបរាជ័យ។</sys:String>
+    <sys:String x:Key="Queue.Title">ជួររង់ចាំទាញយក</sys:String>
+    <sys:String x:Key="Queue.Empty">មិនមានការទាញយកក្នុងជួររង់ចាំទេ។</sys:String>
+    <sys:String x:Key="Queue.Waiting">កំពុងរង់ចាំ</sys:String>
+    <sys:String x:Key="Queue.Downloading">កំពុងទាញយក...</sys:String>
+    <sys:String x:Key="Queue.PostProcessing">កំពុងបញ្ចប់...</sys:String>
+    <sys:String x:Key="Queue.Done">បានបញ្ចប់</sys:String>
+    <sys:String x:Key="Queue.Failed">បរាជ័យ</sys:String>
+    <sys:String x:Key="Queue.TitleUnavailable">មិនអាចរកចំណងជើងបានទេ</sys:String>
+    <sys:String x:Key="Queue.Validating">កំពុងពិនិត្យតំណ...</sys:String>
+    <sys:String x:Key="Queue.Cancel">បោះបង់ការទាញយក</sys:String>
+    <sys:String x:Key="Queue.Retry">ព្យាយាមទាញយកម្ដងទៀត</sys:String>
+    <sys:String x:Key="Queue.Cancelled">បានបោះបង់</sys:String>
+    <sys:String x:Key="Queue.Clear">សម្អាត</sys:String>
+
+    <!-- Dialog Box -->
+    <sys:String x:Key="Msg.LinkMissing.Title">ខ្វះតំណភ្ជាប់</sys:String>
+    <sys:String x:Key="Msg.LinkMissing.Text">សូមបិទភ្ជាប់តំណភ្ជាប់មុនពេលទាញយក។</sys:String>
+    <sys:String x:Key="Msg.ClipboardEmpty.Title">ក្ដារតម្បៀតខ្ទាស់ទទេ</sys:String>
+    <sys:String x:Key="Msg.ClipboardEmpty.Text">មិនទាន់មានតំណភ្ជាប់ត្រូវបានចម្លងទេ។ សូមចម្លងតំណភ្ជាប់វីដេអូសិន។</sys:String>
+    <sys:String x:Key="Msg.ClipboardError.Title">កំហុស</sys:String>
+    <sys:String x:Key="Msg.ClipboardError.Text">មិនអាចអានក្ដារតម្បៀតខ្ទាស់បានទេ។ សូមព្យាយាមម្ដងទៀត។</sys:String>
+    <sys:String x:Key="Msg.DownloadDone.Title">បានបញ្ចប់</sys:String>
+    <sys:String x:Key="Msg.DownloadDone.Text">ការទាញយករបស់អ្នកបានបញ្ចប់!</sys:String>
+    <sys:String x:Key="Msg.DownloadError.Title">កំហុសក្នុងការទាញយក</sys:String>
+    <sys:String x:Key="Msg.Update.Title">ការធ្វើបច្ចុប្បន្នភាព</sys:String>
+    <sys:String x:Key="Msg.UpdateError.Title">កំហុសក្នុងការធ្វើបច្ចុប្បន្នភាព</sys:String>
+
+    <!-- Update  -->
+    <sys:String x:Key="Update.UpToDate">yt-dlp ទាន់សម័យរួចហើយ។</sys:String>
+    <sys:String x:Key="Update.Updated">yt-dlp ត្រូវបានធ្វើបច្ចុប្បន្នភាព។ អ្នកអាចព្យាយាមទាញយកម្ដងទៀត។</sys:String>
+    <sys:String x:Key="Update.Failed">ការធ្វើបច្ចុប្បន្នភាពបរាជ័យ។ សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក។</sys:String>
+
+    <!-- Errors -->
+    <sys:String x:Key="Error.Unknown">ការទាញយកបរាជ័យ។ សូមពិនិត្យតំណភ្ជាប់ ឬព្យាយាមម្ដងទៀត។</sys:String>
+    <sys:String x:Key="Error.Failed">មិនអាចបញ្ចប់ការទាញយកបានទេ។ សូមព្យាយាមម្ដងទៀត ឬធ្វើបច្ចុប្បន្នភាព yt-dlp ប្រសិនបើបញ្ហានៅតែបន្ត។</sys:String>
+    <sys:String x:Key="Error.ToolMissing">រកមិនឃើញសមាសភាគ yt-dlp.exe ទេ។ សូមដំឡើងកម្មវិធីឡើងវិញ។</sys:String>
+    <sys:String x:Key="Error.InvalidUrl">តំណភ្ជាប់នេះមិនត្រឹមត្រូវ ឬមិនត្រូវបានគាំទ្រទេ។ សូមពិនិត្យថាវាពេញលេញ។</sys:String>
+    <sys:String x:Key="Error.InvalidVideoId">លេខសម្គាល់វីដេអូនេះហាក់ដូចជាមិនត្រឹមត្រូវទេ។ សូមពិនិត្យតំណដែលបានចម្លង ហើយព្យាយាមម្ដងទៀត។</sys:String>
+    <sys:String x:Key="Error.AgeRestricted">វីដេអូនេះមានការកំណត់អាយុ ហើយតម្រូវឱ្យចូល YouTube ដែលកម្មវិធីនេះមិនអាចធ្វើបានទេ។</sys:String>
+    <sys:String x:Key="Error.LoginRequired">វីដេអូនេះតម្រូវឱ្យចូល YouTube ប៉ុន្តែកម្មវិធីមិនអាចចូលបានទេ។ សូមសាកល្បងវីដេអូដែលអាចមើលបានដោយមិនចាំបាច់មានគណនី។</sys:String>
+    <sys:String x:Key="Error.NotABot">YouTube ស្នើសុំការផ្ទៀងផ្ទាត់ថាមិនមែនជារ៉ូបូត។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។</sys:String>
+    <sys:String x:Key="Error.Private">វីដេអូនេះជាឯកជន។</sys:String>
+    <sys:String x:Key="Error.MembersOnly">វីដេអូនេះសម្រាប់តែសមាជិកឆានែលប៉ុណ្ណោះ។</sys:String>
+    <sys:String x:Key="Error.GeoBlocked">វីដេអូនេះមិនមានក្នុងប្រទេសរបស់អ្នកទេ។</sys:String>
+    <sys:String x:Key="Error.NotStarted">វីដេអូនេះជាការចាក់បញ្ចាំងដំបូង ឬការផ្សាយផ្ទាល់ដែលមិនទាន់ចាប់ផ្ដើម។</sys:String>
+    <sys:String x:Key="Error.Live">កំពុងផ្សាយផ្ទាល់។ សូមព្យាយាមម្ដងទៀតនៅពេលវាបញ្ចប់។</sys:String>
+    <sys:String x:Key="Error.Unavailable">វីដេអូនេះមិនមាន (ត្រូវបានលុប រារាំង ឬមិនអាចចូលមើលបាន)។</sys:String>
+    <sys:String x:Key="Error.RateLimit">មានសំណើច្រើនពេកក្នុងរយៈពេលខ្លី។ សូមរង់ចាំមួយសន្ទុះ ហើយព្យាយាមម្ដងទៀត។</sys:String>
+    <sys:String x:Key="Error.Network">មិនអាចតភ្ជាប់បានទេ។ សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក។</sys:String>
+    <sys:String x:Key="Error.FormatUnavailable">ទម្រង់ដែលបានជ្រើសមិនមានសម្រាប់វីដេអូនេះទេ។ សូមសាកល្បងទម្រង់ផ្សេង។</sys:String>
+    <sys:String x:Key="Error.Ffmpeg">មិនអាចបម្លែងឯកសារនេះបានទេ។ សូមព្យាយាមម្ដងទៀត។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមដំឡើងកម្មវិធីឡើងវិញ។</sys:String>
+</ResourceDictionary>
